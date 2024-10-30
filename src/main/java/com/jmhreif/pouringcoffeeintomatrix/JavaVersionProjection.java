@@ -4,9 +4,9 @@ import java.util.List;
 
 public interface JavaVersionProjection {
     String getJavaVersion();
-    List<DiffProjection> getOlderVersionDiffs();
+    List<FeatureProjection> getFeatures();
 
-    interface DiffProjection {
-        String getFromVersion();
+    interface FeatureProjection {
+        String getTitle();
     }
 }

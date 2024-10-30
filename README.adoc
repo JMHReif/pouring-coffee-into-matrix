@@ -2,14 +2,14 @@
 
 This is an example application using Spring Data Neo4j and connecting to a Neo4j Aura free tier database. You can recreate this project using the following steps:
 
-1. Create a Neo4j AuraDB free instance using https://dev.neo4j.com/aura[dev.neo4j.com/aura^].
+1. Create a Neo4j AuraDB free instance using https://dev.neo4j.com/aura-java[dev.neo4j.com/aura^].
 
-Creating an instance will require creating a user account with Neo4j, but there are no costs for either the account or to create a free tier database instance. Please record the password you create with your instance. It is not shown to you again and will be needed in order to connect the application to the database.
+Creating an instance will require creating a user account with Neo4j, but there are no costs for either the account or to create a free tier database instance. Please download/store the password you create with your instance. It is not shown to you again and will be needed in order to connect the application to the database.
 
 [start=2]
 2. Once the database instance is created, load the data in the database.
 
-From the main page in Neo4j Aura, there should be a blue button next to the instance. Click this to open Neo4j Browser. At the top of Neo4j Browser window, there is a text input. Copy/paste each statement of the https://github.com/JMHReif/graph-demo-datasets/blob/main/java-versions/java-version-import.cypher[linked script^] into the text input and click the play button on the right.
+From the main page in Neo4j Aura, there should be a blue button next to the instance. Click this to open Neo4j Browser. At the top of Neo4j Browser window, there is a text input. Copy/paste each statement of the https://github.com/JMHReif/graph-demo-datasets/blob/main/java-versions/java-version-import-features.cypher[linked script^] into the text input and click the play button on the right.
 
 [start=3]
 3. Once data is loaded, clone this project and open in your preferred IDE.
@@ -26,9 +26,9 @@ Each diff contains the lists of individual changes (packages, methods, etc) betw
 
 An example of the data model is shown below.
 
-image::src/main/resources/java-version-data-model-v3.png[]
+image::src/main/resources/java-version-features-model.png[]
 
-For this project, we are only concentrating on the `JavaVersion` and `VersionDiff` entities.
+The full data is much larger, but for this project, we are only concentrating on the `JavaVersion`, `Feature`, and `Category` entities.
 Code in the following repositories show additional levels of entities mapped and returned:
 
 * First delta level (module/package): https://github.com/JMHReif/sdn-aura-java-versions[sdn-aura-java-versions^]
@@ -39,6 +39,5 @@ Code in the following repositories show additional levels of entities mapped and
 PDF versions of accompanying presentations are published to SpeakerDeck.
 
 == Resources
-* https://dev.neo4j.com/aura[Neo4j Aura console^]
-* https://neo4j.com/developer/aura-cloud-dbaas/[Neo4j AuraDB developer guides^]
+* https://dev.neo4j.com/aura-java[Neo4j Aura^]
 * https://docs.spring.io/spring-data/neo4j/docs/current/reference/html/#reference[Spring Data Neo4j documentation^]

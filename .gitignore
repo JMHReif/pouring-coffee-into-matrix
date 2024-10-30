@@ -32,3 +32,6 @@ build/
 
 ### VS Code ###
 .vscode/
+
+### Environment setup ###
+neo4j-env.sh

@@ -1,7 +1,5 @@
 package com.jmhreif.pouringcoffeeintomatrix;
 
-import lombok.Data;
-import lombok.RequiredArgsConstructor;
 import org.springframework.data.neo4j.core.schema.Id;
 import org.springframework.data.neo4j.core.schema.Node;
 import org.springframework.data.neo4j.core.schema.Property;
@@ -11,18 +9,11 @@ import java.time.LocalDate;
 import java.util.List;
 
 @Node
-@Data
-@RequiredArgsConstructor
-public class JavaVersion {
-    @Id
-    @Property("version")
-    private final String javaVersion;
-    private String name, codeName, status, apiSpec;
-    private LocalDate gaDate, eolDate;
-
-    @Relationship("FROM_NEWER")
-    private List<VersionDiff> olderVersionDiffs;
-
-    @Relationship("FROM_OLDER")
-    private List<VersionDiff> newerVersionDiffs;
+public record JavaVersion(@Id @Property("version") String javaVersion,
+                          String name,
+                          String codeName,
+                          String status,
+                          LocalDate gaDate,
+                          LocalDate eolDate,
+                          @Relationship("INCLUDES")List<Feature> features) {
 }
