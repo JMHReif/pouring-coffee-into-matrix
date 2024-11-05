@@ -36,8 +36,9 @@ Code in the following repositories show additional levels of entities mapped and
 
 == Presentation
 
-PDF versions of accompanying presentations are published to SpeakerDeck.
+* https://speakerdeck.com/jmhreif/pouring-coffee-into-the-matrix-building-java-applications-on-neo4j-09e02f15-bc82-47c1-9430-3d29aa6bfa37[XtremeJ (Nov 2024)^]
 
 == Resources
+
 * https://dev.neo4j.com/aura-java[Neo4j Aura^]
 * https://docs.spring.io/spring-data/neo4j/docs/current/reference/html/#reference[Spring Data Neo4j documentation^]

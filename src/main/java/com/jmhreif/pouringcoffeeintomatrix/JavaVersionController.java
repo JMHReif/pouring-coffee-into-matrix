@@ -18,8 +18,13 @@ public class JavaVersionController {
         return javaVersionRepo.findAll();
     }
 
+    @GetMapping("/subset")
+    Iterable<JavaVersion> findSubset() {
+        return javaVersionRepo.findJavaVersionsSubset();
+    }
+
     @GetMapping("/projection")
-    Iterable<JavaVersionProjection> findAllJavaVersions() {
-        return javaVersionRepo.findAllJavaVersions();
+    Iterable<JavaVersionProjection> findJavaVersionsProjection() {
+        return javaVersionRepo.findJavaVersionsProjection();
     }
 }
